@@ -5,7 +5,6 @@ class MoviesController < ApplicationController
   # GET /movies.json
   def index
     @movies = Movie.all
-    @user = current_user
   end
 
   # GET /movies/1
@@ -16,7 +15,7 @@ class MoviesController < ApplicationController
   # GET /movies/new
   def new
     @movie = Movie.new
-    @user = current_user
+
   end
 
   # GET /movies/1/edit
@@ -27,7 +26,7 @@ class MoviesController < ApplicationController
   # POST /movies.json
   def create
     @movie = Movie.new(movie_params)
-    @user = current_user
+    @movie.user = current_user
 
     respond_to do |format|
       if @movie.save
