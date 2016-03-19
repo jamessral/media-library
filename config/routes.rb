@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   # mount ActionCable.server => '/cable'
   root to: 'movies#index'
   resources :movies
+  resources :shows
 end
+

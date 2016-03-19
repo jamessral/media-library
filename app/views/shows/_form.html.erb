@@ -1,0 +1,54 @@
+<%= form_for(show, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+  <% if show.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(show.errors.count, "error") %> prohibited this show from being saved:</h2>
+
+      <ul>
+      <% show.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class='form-group'>
+
+    <div class="control-label col-sm-2">
+      <%= f.label :name %>
+    </div>
+    <div class='col-sm-8'>
+      <%= f.text_field :name, class: 'form-control', placeholder: "Show Title", autofocus: true %>
+    </div>
+  </div>
+  <div class='form-group'>
+    <div class="control-label col-sm-2">
+      <%= f.label :season %>
+    </div>
+    <div class='col-sm-8'>
+      <%= f.text_field :season, class: 'form-control', placeholder: "Season" %>
+    </div>
+  </div>
+ 
+  <div class='form-group'>
+    <div class="control-label col-sm-2">
+      <%= f.label :format %>
+    </div>
+    <div class='col-sm-8'>
+      <%= f.text_field :format, class: 'form-control', placeholder: "Format" %>
+    </div>
+  </div>
+
+  <div class='form-group'>
+    <div class="control-label col-sm-2">
+      <%= f.label :year %>
+    </div>
+    <div class='col-sm-8'>
+      <%= f.number_field :year, class: 'form-control', placeholder: "Year" %>
+    </div>
+  </div>
+  <div class='form-group'>
+    <div class="col-sm-8 col-sm-offset-2">
+      <%= f.submit class: 'btn btn-primary btn-lg' %>
+    </div>
+  </div>
+<% end %>
