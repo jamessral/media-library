@@ -31,6 +31,15 @@
  
   <div class='form-group'>
     <div class="control-label col-sm-2">
+      <%= f.label :format %>
+    </div>
+    <div class='col-sm-8'>
+      <%= f.text_field :format, class: 'form-control', placeholder: "Format" %>
+    </div>
+  </div>
+
+  <div class='form-group'>
+    <div class="control-label col-sm-2">
       <%= f.label :year %>
     </div>
     <div class='col-sm-8'>

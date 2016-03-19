@@ -16,6 +16,13 @@
     <%= @movie.year %>
   </p>
 
+  <% unless @movie.format.nil? || @movie.format == '' %>
+  <p>
+    <strong>Format:</strong>
+    <%= @movie.format %>
+  </p>
+  <% end %>
+
   <%= link_to 'Edit', edit_movie_path(@movie), class: 'btn btn-sm btn-primary' %> |
   <%= link_to 'Back', movies_path, class: 'btn btn-sm btn-primary' %>
 </div>
