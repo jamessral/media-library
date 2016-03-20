@@ -10,6 +10,8 @@ gem 'bootstrap-sass'
 
 gem 'devise', '4.0.0.rc1'
 
+gem 'kaminari', :git => "git://github.com/amatsuda/kaminari.git", :branch => 'master'
+
 gem 'puma'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'

@@ -5,7 +5,7 @@ class ShowsController < ApplicationController
   # GET /shows
   # GET /shows.json
   def index
-    @shows = current_user.shows
+    @shows = current_user.shows.page(params[:page])
   end
 
   # GET /shows/1

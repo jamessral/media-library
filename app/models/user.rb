@@ -6,5 +6,7 @@ class User < ApplicationRecord
 
   has_many :movies
   has_many :shows
+
+  paginates_per 15
 end
 

@@ -4,7 +4,7 @@ class MoviesController < ApplicationController
   # GET /movies
   # GET /movies.json
   def index
-    @movies = current_user.movies 
+    @movies = current_user.movies.page(params[:page]) 
   end
 
   # GET /movies/1
