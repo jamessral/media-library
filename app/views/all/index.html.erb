@@ -1,0 +1,31 @@
+<div class='panel panel-default'>
+  <%= paginate @movies %>
+
+  <div class='panel-heading'><strong>Movies</strong></div>
+  <table class='table'>
+    <tbody>
+      <% @movies.each do |movie| %>
+        <tr>
+          <td><%= movie.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+<br>
+
+<div class='panel panel-default'>
+  <% paginate @shows %>
+
+  <div class='panel-heading'><strong>Shows</strong></div>
+  <table class='table'>
+    <tbody>
+      <% @shows.each do |show| %>
+        <tr>
+          <td><%= show.name %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>
