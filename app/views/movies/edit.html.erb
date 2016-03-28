@@ -1,6 +1,6 @@
-<h1>Editing Movie</h1>
+<h1 class='center'>Editing Movie</h1>
 
 <%= render 'form', movie: @movie %>
 
-<%= link_to 'Show', @movie %> |
-<%= link_to 'Back', movies_path %>
+<%= link_to 'Show', @movie, class: 'btn btn-md btn-primary col-xs-offset-1' %>
+<%= link_to 'Back', movies_path, class: 'btn btn-md btn-primary' %>

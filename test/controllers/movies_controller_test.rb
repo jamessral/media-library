@@ -3,12 +3,18 @@ require 'test_helper'
 class MoviesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @movie = movies(:one)
+    @user = User.new(username: 'bob', email: 'bob@example.com', password: 'password')
   end
 
   test "should get index" do
     get movies_url
     assert_response :success
   end
+
+ # test "should show only current user movies" do
+ #   get :index
+ #   assert_equal @movie.user_id, @user.id
+ # end
 
   test "should get new" do
     get new_movie_url

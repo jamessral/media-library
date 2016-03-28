@@ -1,6 +1,6 @@
-<h1>Editing Show</h1>
+<h1 class='center'>Editing Show</h1>
 
 <%= render 'form', show: @show %>
 
-<%= link_to 'Show', @show %> |
-<%= link_to 'Back', shows_path %>
+<%= link_to 'Show', @show, class: 'btn btn-md btn-primary col-xs-offset-1'%> 
+<%= link_to 'Back', shows_path, class: 'btn btn-md btn-primary' %>
